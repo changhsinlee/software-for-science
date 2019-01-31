@@ -1,6 +1,0 @@
-[out:json][timeout:25];
-( node["name"="Charlotte"]; );
-// print results
-out body;
->;
-out skel qt;

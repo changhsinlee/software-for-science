@@ -1,0 +1,87 @@
+.breadcrumbs {
+  background-color: #282c34;
+  color: #aaa;
+  width: 56px;
+}
+.breadcrumb {
+    width: 48px;
+    height: 48px;
+    padding: 4px;
+    font-size: 14pt;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Roboto Mono', 'Courier New', Courier, monospace;
+}
+.text-editor {
+    background: #eee;
+    padding: 1em;
+    flex: 5;
+}
+.mono {
+    font-family: 'Roboto Mono', 'Courier New', Courier, monospace;
+}
+.projector {
+    width: 960px;
+    height: 540px;
+    display: flex;
+}
+.glass-sheet {
+    position: absolute;
+    bottom: 0px;
+    width: 960px;
+    height: 400px;
+    text-align: center;
+
+    filter: blur();
+    background-color: #282c34;
+    background-size: cover;
+    opacity: 0.5;
+}
+
+
+/* .blurred-box {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    left: calc(50% - 200px);
+    top: calc(50% - 150px);
+    border-radius: 2px;
+    overflow: hidden;
+    z-index: 3;
+    text-align: center;
+    padding-top: 1em;
+  }
+  
+.blurred-box:after{
+   content: ' ';
+   width: 800px;
+   height: 600px;
+   background: rgba(155, 155, 155, 0.356);
+   position: absolute;
+   left: -25px;
+   right: 0;
+   top: -25px;
+   bottom: 0;
+   box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
+   filter: blur(5px);
+   z-index: 2;
+  } */
+
+.blurred-box {
+    -webkit-backdrop-filter: blur(2px);
+    background: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    width: 900px;
+    height: 300px;
+    /* left: calc(50% - 450px); */
+    left: 60px;
+    top: 10px;
+    box-sizing: border-box;
+    padding: 1em;
+    overflow: hidden;
+    transition: top 1s;
+}
+.blurred-box.hide-glass {
+    top: 100%;
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');

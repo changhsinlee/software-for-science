@@ -1,0 +1,15 @@
+**/node_modules
+*.wav
+*.mp4
+*.reapeaks
+*.DS_Store
+*.swp
+*~
+*-bk
+*-bak
+*.rpp
+*.swp
+*.pdf
+*.key
+*.mov
+*.ppt

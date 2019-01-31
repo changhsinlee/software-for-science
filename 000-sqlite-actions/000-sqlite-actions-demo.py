@@ -19,7 +19,9 @@ def file_perm(name):
     ''' Stub to find a file's permissions '''
     return 640
 
-names = conn.execute("SELECT name from tab;").fetchall()
+conn.execute("CREATE TABLE filenames(name TEXT)")
+conn.executemany("INSERT INTO filenames(name) VALUES (?)", [["foo"], ["bar"], ["baz"]])
+names = conn.execute("SELECT name FROM filenames;").fetchall()
 cursor.executemany(
     "INSERT INTO file_status(size, perm, name) VALUES (?,?,?);",
     # This whole list goes into memory before we start
@@ -34,5 +36,5 @@ cursor.execute(
     # This is evaluated as we go
     """INSERT INTO file_status(size, perm, name)
     SELECT file_size(name), file_perm(name), name
-    FROM tab;"""
+    FROM filenames;"""
 )
